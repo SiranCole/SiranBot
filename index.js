@@ -12,9 +12,12 @@ client.on("ready", () => {
     console.log(`Logged in as ${client.user.tag}`)
 })
 
+var phrases = ["Calla mierda.", "Eres el camarón del grupo.", "Tkm.", "Feliz día pala.", "No hay comprensión.", "Es que tú no entiendes wn"]
+
 client.on("messageCreate", (message) => {
-    if(message.content == "Hi"){
-        message.reply("")
+    if(message.content == "camaron"){
+        var phrase = phrases[Math.floor(Math.random()*phrases.length)];
+        message.reply(phrase)
     }
 })
 
